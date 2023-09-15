@@ -10,6 +10,7 @@ services:
 
   node-app:
     build: .
+    image: jaimax/node-app
     depends_on:
       - mongo
     environment:
