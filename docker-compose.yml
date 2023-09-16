@@ -9,7 +9,10 @@ services:
       - node-app
 
   node-app:
-    build: .
+    build:
+      context: .
+      platforms:
+        - linux/amd64
     image: jaimax/node-app
     depends_on:
       - mongo
